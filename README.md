@@ -2,6 +2,7 @@
 
 The script will check for Policy maps (PM) in the configuration and the interfaces to which each they are applied to as service policies. Under each PM, the ACLs and actions will be displayed. It saves a lot of time typing show commands repeatedly. A sample output is shown below.
 
+```
 ===========================================
 --- Policy-map: PM-IB-Trunk
 		Applied to:
@@ -46,9 +47,10 @@ The script will check for Policy maps (PM) in the configuration and the interfac
 		<qos-group-value>
 			3
 -------------------------------------
-
+```
 By default, IOS will not verify ACL names in class maps. This makes it really difficult to troubleshoot when we make a small typo and cannot figure out why our voice traffic is left un-tagged or transferred in lower priority queues. The script will also help to troubleshoot this common mistake as we can see from the next output:
 
+```
 -------------------------------------
 
 --- Class-map: CM-IB-RC-Other [match-any]
@@ -62,5 +64,6 @@ By default, IOS will not verify ACL names in class maps. This makes it really di
 		<qos-group-value>
 			4
 -------------------------------------
+```
 
 The script is implemented based on a simple configuration, so it will not work perfectly. I will be adding more to the script as I see more variations of MQC configuration.
