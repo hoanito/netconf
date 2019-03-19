@@ -33,8 +33,8 @@ def main():
                          password=args.password,
                          device_params={'name':"iosxe"}
                           ) as cisco_manager:
-
-        getAll(cisco_manager)
+        getPM(cisco_manager)
+        #getAll(cisco_manager)
 
 
 def getAll (cisco_manager):
